@@ -11,7 +11,7 @@ export default function Home() {
 
       <div className={styles.container}>
         <Head>
-          <title>Create Next App</title>
+          <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
         </Head>
         <main className={styles.main}>
           <h1 className={styles.title}>
