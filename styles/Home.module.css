@@ -15,6 +15,15 @@
   justify-content: center;
   align-items: center;
 }
+.linkinput{
+  background-color: hsl(257, 27%, 26%);
+  background-image: url('/images/bg-shorten-desktop.svg');
+  background-repeat:no-repeat;
+  height:150px;
+  width:800px;
+  border-radius: 15px;
+
+}
 
 .footer {
   width: 100%;

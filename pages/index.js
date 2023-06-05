@@ -1,59 +1,61 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import Navbar from '../components/Navbar';
+import { Button } from 'react-bootstrap';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-      </Head>
+    <>
+      <Navbar />
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <div className={styles.container}>
+        <Head>
+          <title>Create Next App</title>
+        </Head>
+        <main className={styles.main}>
+          <h1 className={styles.title}>
+            More than just shorter links
+          </h1>
+          <p className={styles.description}>
+            Build your brand’s recognition and get detailed insights
+            on how your links are performing.
+          </p>
+          <Button variant="primary">Get Started</Button>
+          <div>
+          <Image src="/images/illustration-working.svg" alt="working" width={600} height={450} />
+          </div>
+        </main>
+        <div className={styles.linkinput}>
+          <input type="text" placeholder="Enter your link" id="linkinput"  />
+          <Button variant="primary">Shorten It!</Button>
         </div>
-      </main>
 
-      <footer className={styles.footer}>
-        <a href="https://next.new" target="_blank" rel="noopener noreferrer">
-          Created with&nbsp;<b>next.new</b>&nbsp;⚡️
-        </a>
-      </footer>
-    </div>
+        <footer className={styles.footer}>
+          Boost your links today
+
+          Get Started
+
+          Features
+
+          Link Shortening
+          Branded Links
+          Analytics
+
+          Resources
+
+          Blog
+          Developers
+          Support
+
+          Company
+
+          About
+          Our Team
+          Careers
+          Contact
+        </footer>
+      </div>
+    </>
   );
 }

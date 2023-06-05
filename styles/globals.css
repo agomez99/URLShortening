@@ -14,3 +14,9 @@ a {
 * {
   box-sizing: border-box;
 }
+
+#linkinput{
+  width:600px;
+  height:60px;
+  border-radius:10px;
+}
