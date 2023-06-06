@@ -44,8 +44,11 @@ export default function Home() {
         <div className={styles.statistics}>
           <h1>Advance statistics</h1>
           <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="./images/icon-brand-recognition.svg" />
+          <div class="row">
+
+          <div class="col-sm-4">
+          <Card style={{ width: '20rem' }} className={styles.card1}>
+            <Image src="/images/icon-brand-recognition.svg" alt="brand" width={50} height={50} />
             <Card.Body>
               <Card.Title>Brand Recognition</Card.Title>
               <Card.Text>
@@ -54,10 +57,11 @@ export default function Home() {
               </Card.Text>
             </Card.Body>
           </Card>
-
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="./images/icon-detailed-records.svg" />
-
+    </div>
+    <div class="col-sm-4">
+          
+          <Card style={{ width: '20rem' }} className={styles.card2}>
+            <Image src="/images/icon-detailed-records.svg" alt="detailed" width={50} height={50} /> 
             <Card.Body>
               <Card.Title>Detailed Records</Card.Title>
               <Card.Text>
@@ -66,9 +70,12 @@ export default function Home() {
               </Card.Text>
             </Card.Body>
           </Card>
-
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="./images/icon-fully-customizable.svg" />
+</div>
+    <div class="col-sm-4">
+          
+          
+          <Card style={{ width: '20rem' }} className={styles.card3}>
+            <Image src="/images/icon-fully-customizable.svg" alt="customizable" width={50} height={50} />
 
             <Card.Body>
               <Card.Title>Fully Customizable</Card.Title>
@@ -79,8 +86,9 @@ export default function Home() {
             </Card.Body>
           </Card>
         </div>
+      </div>
 
-
+</div>
         <div className={styles.bottom}>
           <p className={styles.bottomText}>Boost your links today</p>
           <Button variant="primary" className={styles.started}>Get Started</Button>
