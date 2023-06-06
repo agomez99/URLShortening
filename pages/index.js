@@ -2,8 +2,12 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Navbar from '../components/Navbar';
 import { Button, Card } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Image from 'next/image';
-
+import Shortener from '../components/Shortener';
+import { Facebook,Twitter, Pinterest, Instagram  } from 'react-bootstrap-icons';
 export default function Home() {
   return (
     <>
@@ -14,28 +18,34 @@ export default function Home() {
           <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
         </Head>
         <main className={styles.main}>
-          <h1 className={styles.title}>
-            More than just shorter links
-          </h1>
-          <p className={styles.description}>
-            Build your brand’s recognition and get detailed insights
-            on how your links are performing.
-          </p>
-          <Button variant="primary">Get Started</Button>
-          <div>
-            <Image src="/images/illustration-working.svg" alt="working" width={600} height={450} />
-          </div>
-        </main>
-        <div className={styles.linkinput}>
-          <input type="text" placeholder="Enter your link" id="linkinput" />
-          <Button variant="primary">Shorten It!</Button>
-        </div>
+          <Container>
+            <Row>
+              <Col>
+                <h1 className={styles.title}>
+                  More than just shorter links
+                </h1>
+                <p className={styles.description}>
+                  Build your brand’s recognition and get detailed insights
+                  on how your links are performing.
+                </p>
+                <Button variant="primary" className={styles.started}>Get Started</Button>
+              </Col>
+              <Col>
+                <div>
+                  <Image src="/images/illustration-working.svg" alt="working" width={600} height={450} />
+                </div>
+              </Col>
+            </Row>
+          </Container>
 
+
+        </main>
+        <Shortener />
         <div className={styles.statistics}>
           <h1>Advance statistics</h1>
           <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
           <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Img variant="top" src="./images/icon-brand-recognition.svg"  />
             <Card.Body>
               <Card.Title>Brand Recognition</Card.Title>
               <Card.Text>
@@ -46,6 +56,8 @@ export default function Home() {
           </Card>
 
           <Card style={{ width: '18rem' }}>
+          <Card.Img variant="top" src="./images/icon-detailed-records.svg"  />
+
             <Card.Body>
               <Card.Title>Detailed Records</Card.Title>
               <Card.Text>
@@ -56,6 +68,8 @@ export default function Home() {
           </Card>
 
           <Card style={{ width: '18rem' }}>
+          <Card.Img variant="top" src="./images/icon-fully-customizable.svg"    />
+
             <Card.Body>
               <Card.Title>Fully Customizable</Card.Title>
               <Card.Text>
@@ -68,31 +82,48 @@ export default function Home() {
 
 
         <div className={styles.bottom}>
-          Boost your links today
+          <p className={styles.bottomText}>Boost your links today</p>
+          <Button variant="primary" className={styles.started}>Get Started</Button>
         </div>
-        <Button variant="primary" >Get Started</Button>
+
       </div>
       <footer className={styles.footer}>
+      <Image src="/images/logo2.svg" alt="logo" width={100} height={40}  />
+
+        <div className={styles.footerText}>
+        <p>Features</p>
+        <p>Link Shortening</p>
+        <p>Branded Links</p>
+        <p>Analytics</p>
+        </div>
+
+        <div className={styles.footerText}>
+        <p>Resources</p>
+        <p>Blog</p>
+        <p>Developers</p>
+        <p>Support</p>
+        </div>
+        <div className={styles.footerText}>
+        <p>Company</p>
+        <p>About</p>
+        <p>Our Team</p>
+        <p>Careers</p>
+        <p>Contact</p>
+        </div>
+        <div>
+
+<Facebook color="white" size={50}/>
+          <Twitter color="white" size={50}/>
+          <Pinterest color="white" size={50}/>
+          <Instagram color="white" size={50}/>
 
 
-        Features
 
-        Link Shortening
-        Branded Links
-        Analytics
 
-        Resources
 
-        Blog
-        Developers
-        Support
+          
+        </div>
 
-        Company
-
-        About
-        Our Team
-        Careers
-        Contact
       </footer>
     </>
   );

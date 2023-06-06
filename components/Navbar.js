@@ -2,8 +2,11 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Button from 'react-bootstrap/Button';
 import React from 'react'
 import Image from 'next/image';
+import styles from '../styles/Nav.module.css'
+
 export default function NavbarComponent() {
   return (
     <Navbar bg="light" expand="lg">
@@ -17,6 +20,10 @@ export default function NavbarComponent() {
           <Nav.Link href="#home">Features</Nav.Link>
           <Nav.Link href="#link">Pricing</Nav.Link>
           <Nav.Link href="#resourced">Resources</Nav.Link>
+        </Nav>
+        <Nav className="ml-auto">
+        <Nav.Link href="#resourced">Login</Nav.Link>
+          <Nav.Link href="#resourced"><Button variant="primary" className={styles.signup}>Sign Up</Button></Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Container>
