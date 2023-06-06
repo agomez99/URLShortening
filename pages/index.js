@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'next/image';
 import Shortener from '../components/Shortener';
-import { Facebook,Twitter, Pinterest, Instagram  } from 'react-bootstrap-icons';
+import { Facebook, Twitter, Pinterest, Instagram } from 'react-bootstrap-icons';
 export default function Home() {
   return (
     <>
@@ -45,7 +45,7 @@ export default function Home() {
           <h1>Advance statistics</h1>
           <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
           <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="./images/icon-brand-recognition.svg"  />
+            <Card.Img variant="top" src="./images/icon-brand-recognition.svg" />
             <Card.Body>
               <Card.Title>Brand Recognition</Card.Title>
               <Card.Text>
@@ -56,7 +56,7 @@ export default function Home() {
           </Card>
 
           <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="./images/icon-detailed-records.svg"  />
+            <Card.Img variant="top" src="./images/icon-detailed-records.svg" />
 
             <Card.Body>
               <Card.Title>Detailed Records</Card.Title>
@@ -68,7 +68,7 @@ export default function Home() {
           </Card>
 
           <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="./images/icon-fully-customizable.svg"    />
+            <Card.Img variant="top" src="./images/icon-fully-customizable.svg" />
 
             <Card.Body>
               <Card.Title>Fully Customizable</Card.Title>
@@ -86,45 +86,46 @@ export default function Home() {
           <Button variant="primary" className={styles.started}>Get Started</Button>
         </div>
 
-      </div>
       <footer className={styles.footer}>
-      <Image src="/images/logo2.svg" alt="logo" width={100} height={40}  />
+        <Image src="/images/logo2.svg" alt="logo" width={100} height={40} />
 
         <div className={styles.footerText}>
-        <p>Features</p>
-        <p>Link Shortening</p>
-        <p>Branded Links</p>
-        <p>Analytics</p>
+          <p className={styles.footerTitle}>Features</p>
+          <p>Link Shortening</p>
+          <p>Branded Links</p>
+          <p>Analytics</p>
         </div>
 
         <div className={styles.footerText}>
-        <p>Resources</p>
-        <p>Blog</p>
-        <p>Developers</p>
-        <p>Support</p>
+          <p className={styles.footerTitle}>Resources</p>
+          <p>Blog</p>
+          <p>Developers</p>
+          <p>Support</p>
         </div>
         <div className={styles.footerText}>
-        <p>Company</p>
-        <p>About</p>
-        <p>Our Team</p>
-        <p>Careers</p>
-        <p>Contact</p>
+          <p className={styles.footerTitle}>Company</p>
+          <p>About</p>
+          <p>Our Team</p>
+          <p>Careers</p>
+          <p>Contact</p>
         </div>
         <div>
-
-<Facebook color="white" size={50}/>
-          <Twitter color="white" size={50}/>
-          <Pinterest color="white" size={50}/>
-          <Instagram color="white" size={50}/>
-
-
-
+          <div >
+          <Facebook color="white" size={40} className={styles.footerIcons} />
+          <Twitter color="white" size={40} className={styles.footerIcons}/>
+          <Pinterest color="white" size={40} className={styles.footerIcons}/>
+          <Instagram color="white" size={40} className={styles.footerIcons}/>
+        </div>
 
 
-          
+
+
+
         </div>
 
       </footer>
+      </div>
+
     </>
   );
 }

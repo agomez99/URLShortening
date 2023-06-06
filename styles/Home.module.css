@@ -1,6 +1,5 @@
 .container {
   min-height: 100vh;
-  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,6 +58,12 @@
 .footerText{
   margin-right:4rem;
 }
+.footerTitle{
+  font-weight: 800
+}
+.footerIcons{
+  margin-right: 10px;
+}
 .title a {
   color: #0070f3;
   text-decoration: none;
@@ -84,22 +89,6 @@
 .description {
   line-height: 1.5;
   font-size: 1.5rem;
-}
-.started{
-  background-color: aqua;
-  border-radius: 25px;
-  border:none;
-  width:150px;
-  height:40px;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
 .grid {
