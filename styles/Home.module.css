@@ -23,8 +23,10 @@
 }
 .statistics{
   width: 100%;
-  background-color: #0070f3;
+  background-color: white;
   align-items: center;
+  padding-bottom: 10%;
+  margin-top: 5%;
 
 }
 .card1{
@@ -41,13 +43,23 @@
   margin-top: 20%;
 
 }
-
+.line {
+  width: 500px;
+  height: 47px;
+  border-bottom: 10px solid hsl(180, 66%, 49%);
+  position: absolute;
+  top:125%;
+  right:40%
+}
 
 
 .bottom{
   background-color: hsl(257, 27%, 26%);
-  background-image: url('/images/bg-shorten-desktop.svg');
-  background-repeat:no-repeat;
+  background-image: url('/images/bg-boost-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
   height:170px;
   width:100%;
   display: flex;
@@ -112,7 +124,13 @@
   line-height: 1.5;
   font-size: 1.5rem;
 }
-
+.started{
+  background-color: aqua;
+  border-radius: 25px;
+  border:none;
+  width:150px;
+  height:40px;
+}
 .grid {
   display: flex;
   align-items: center;
@@ -121,7 +139,16 @@
   max-width: 800px;
   margin-top: 3rem;
 }
-
+.iconCircle{
+  border-radius: 50px;
+  background-color: hsl(257, 27%, 26%);
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+  padding: 4%;
+  width:65px;
+  height:65px;
+}
 .card {
   margin: 1rem;
   flex-basis: 45%;

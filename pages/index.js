@@ -42,13 +42,17 @@ export default function Home() {
         </main>
         <Shortener />
         <div className={styles.statistics}>
-          <h1>Advance statistics</h1>
-          <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
+        <div className={styles.line}></div>
+          <h1 className='text-center'>Advance statistics</h1>
+          <p className='text-center'>Track how your links are performing across the web with our advanced statistics dashboard.</p>
           <div class="row">
 
           <div class="col-sm-4">
           <Card style={{ width: '20rem' }} className={styles.card1}>
-            <Image src="/images/icon-brand-recognition.svg" alt="brand" width={50} height={50} />
+          <div className={styles.iconCircle}>
+            <Image src="/images/icon-brand-recognition.svg" alt="brand" width={40} height={40} />
+            </div>
+            
             <Card.Body>
               <Card.Title>Brand Recognition</Card.Title>
               <Card.Text>
@@ -61,7 +65,9 @@ export default function Home() {
     <div class="col-sm-4">
           
           <Card style={{ width: '20rem' }} className={styles.card2}>
-            <Image src="/images/icon-detailed-records.svg" alt="detailed" width={50} height={50} /> 
+          <div className={styles.iconCircle}>
+            <Image src="/images/icon-detailed-records.svg" alt="detailed" width={40} height={40} /> 
+            </div>
             <Card.Body>
               <Card.Title>Detailed Records</Card.Title>
               <Card.Text>
@@ -75,8 +81,10 @@ export default function Home() {
           
           
           <Card style={{ width: '20rem' }} className={styles.card3}>
-            <Image src="/images/icon-fully-customizable.svg" alt="customizable" width={50} height={50} />
+          <div className={styles.iconCircle}>
 
+            <Image src="/images/icon-fully-customizable.svg" alt="customizable" width={40} height={40} />
+</div>
             <Card.Body>
               <Card.Title>Fully Customizable</Card.Title>
               <Card.Text>
