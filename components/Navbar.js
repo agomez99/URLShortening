@@ -1,7 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
 import React from 'react'
 import Image from 'next/image';
@@ -9,8 +8,8 @@ import styles from '../styles/Nav.module.css'
 
 export default function NavbarComponent() {
   return (
-    <Navbar bg="light" expand="lg">
-    <Container>
+    <Navbar  expand="lg" className={styles.navbar}>
+    <Container fluid>
       <Navbar.Brand href="#home">
       <Image src="/images/logo.svg" width={100} height={30} alt="logo" />
       </Navbar.Brand>

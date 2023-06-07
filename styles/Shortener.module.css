@@ -3,13 +3,40 @@
         background-color: hsl(257, 27%, 26%);
         background-image: url('/images/bg-shorten-desktop.svg');
         background-repeat:no-repeat;
+        background-position: center;
+        background-size: cover;
         height:150px;
-        width:900px;
+        width:1200px;
         border-radius: 15px;
-
+        vertical-align: middle;
             
 }
 
-.results{
+.shorten{
+        background-color: aqua;
+        border-radius: 10px;
+        border:none;
+        width:150px;
+        height:50px;     
+}
+
+
+@media (max-width: 600px) {
+
+
+        .linkinput{
+
+                background-color: hsl(257, 27%, 26%);
+                background-image: url('/images/bg-shorten-desktop.svg');
+                background-repeat:no-repeat;
+                background-position: center;
+                background-size: cover;
+                height:150px;
+                width:100%;
+                border-radius: 15px;
+                vertical-align: middle;
+                    
+        }
+
 
 }

@@ -34,7 +34,7 @@ export default function Shortener() {
   };
 
   return (
-    <div>
+    <div class="container-sm">
       <div className={styles.linkinput}>
       <form method="post" action="" onSubmit={handleSubmit}>
           <input
@@ -45,7 +45,7 @@ export default function Shortener() {
             placeholder="Enter a URL"
             required
           />
-          <Button variant="primary" type="submit">
+          <Button variant="primary" type="submit" className={styles.shorten}>
             Shorten It!
           </Button>
         </form>
