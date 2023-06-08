@@ -13,15 +13,17 @@ export default function Home() {
     <>
         <Head>
           <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+          <meta name="viewport" content="initial-scale=1.0, width=device-width"></meta>
+
         </Head>
         <div className={styles.container}>
-
         <main >
-          <Container>
+          <Container >
             <Row>
             <Navbar />
 
-              <Col class="col-lg-6 col-sm-12">
+              <Col  lg={6} sm={12}>
+              <div className={styles.titleDiv}>
                 <h1 className={styles.title}>
                   More than just shorter links
                 </h1>
@@ -30,10 +32,12 @@ export default function Home() {
                   on how your links are performing.
                 </p>
                 <Button variant="primary" className={styles.started}>Get Started</Button>
+                </div>
+
               </Col>
-              <Col class="col-lg-6 col-sm-12">
-                <div>
-                  <Image src="/images/illustration-working.svg" alt="working" width={600} height={450} className={styles.image} />
+              <Col  lg={6} sm={12} >
+                <div className={styles.imageContainer}>
+                  <Image src="/images/illustration-working.svg" alt="working" width={700} height={550} className={styles.image} />
                 </div>
               </Col>
             </Row>
@@ -44,11 +48,12 @@ export default function Home() {
         <Shortener />
         <div className={styles.statistics}>
           <div className={styles.line}></div>
-          <h1 className='text-center'>Advance statistics</h1>
-          <p className='text-center mb-5 mt-3 text-muted'>Track how your links are performing across the web with our advanced statistics dashboard.</p>
+          <h1 className={styles.statisticsTitle}>Advance statistics</h1>
+          <p className={styles.statisticsDescription}>Track how your links are performing across the web with our advanced statistics dashboard.</p>
           <div class="row">
+          <div className={styles.line2}></div>
 
-            <div class="col-sm-4">
+          <Col lg={4} sm={12} className={styles.statsCol}>
               <Card style={{ width: '20rem' }} className={styles.card1}>
                 <div className={styles.iconCircle}>
                   <Image src="/images/icon-brand-recognition.svg" alt="brand" width={40} height={40} />
@@ -62,8 +67,8 @@ export default function Home() {
                   </Card.Text>
                 </Card.Body>
               </Card>
-            </div>
-            <div class="col-sm-4">
+            </Col>
+            <Col lg={4} className={styles.statsCol}>
 
               <Card style={{ width: '20rem' }} className={styles.card2}>
                 <div className={styles.iconCircle}>
@@ -77,10 +82,8 @@ export default function Home() {
                   </Card.Text>
                 </Card.Body>
               </Card>
-            </div>
-            <div class="col-sm-4">
-
-
+            </Col>
+            <Col lg={4} className={styles.statsCol}>
               <Card style={{ width: '20rem' }} className={styles.card3}>
                 <div className={styles.iconCircle}>
                   <Image src="/images/icon-fully-customizable.svg" alt="customizable" width={40} height={40} />
@@ -93,7 +96,7 @@ export default function Home() {
                   </Card.Text>
                 </Card.Body>
               </Card>
-            </div>
+            </Col>
           </div>
 
         </div>
@@ -126,17 +129,10 @@ export default function Home() {
             <p>Contact</p>
           </div>
           <div>
-            <div >
               <Facebook color="white" size={40} className={styles.footerIcons} />
               <Twitter color="white" size={40} className={styles.footerIcons} />
               <Pinterest color="white" size={40} className={styles.footerIcons} />
               <Instagram color="white" size={40} className={styles.footerIcons} />
-            </div>
-
-
-
-
-
           </div>
 
         </footer>

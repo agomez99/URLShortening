@@ -21,7 +21,7 @@ export default function NavbarComponent() {
           <Nav.Link href="#resourced">Resources</Nav.Link>
         </Nav>
         <Nav className="ml-auto">
-        <Nav.Link href="#resourced">Login</Nav.Link>
+        <Nav.Link href="#resourced" className='my-auto'>Login</Nav.Link>
           <Nav.Link href="#resourced"><Button variant="primary" className={styles.signup}>Sign Up</Button></Nav.Link>
         </Nav>
       </Navbar.Collapse>
