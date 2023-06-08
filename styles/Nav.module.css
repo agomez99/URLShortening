@@ -10,3 +10,30 @@
   .navbar{
     margin-bottom: 5%;
   }
+
+
+  @media (max-width: 600px) {
+
+
+
+
+
+  .navbarCollapse{
+    background-color: hsl(257, 27%, 26%);
+    border-radius: 5%;
+    text-align: center;
+    height:400px;
+  }
+
+  .navbarLink{
+    color: white;
+    margin-bottom: 5%;
+    margin-top: 5%;
+
+  }
+  .signup{
+    width:80%;
+    height:50px;
+  }
+
+}

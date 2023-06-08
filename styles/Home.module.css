@@ -14,6 +14,7 @@
 
 
 }
+
 .imageContainer{
   margin-bottom: 10%;
 }
@@ -118,6 +119,14 @@
   line-height: 1.5;
   font-size: 1.4rem;
 }
+.started1{
+  background-color: aqua;
+  border-radius: 25px;
+  border:none;
+  width:200px;
+  height:50px;
+  margin-bottom: 10%;
+}
 .started{
   background-color: aqua;
   border-radius: 25px;
@@ -184,6 +193,11 @@
 }
 
 @media (max-width: 600px) {
+
+
+  .homeCol{
+  flex-direction: column-reverse;
+  }
   .titleDiv{
     text-align: center;
   }
@@ -198,7 +212,7 @@
   }
 
 .image{
-  width:300px;
+  width:400px;
   height:300px;
 }
 
@@ -245,4 +259,40 @@ align-items: center;
 align-content: center;
 text-align: center;
   }
+
+  .bottom{
+    text-align: center;
+    height: 300px;
+    background-position:left;
+  }
+  .bottomText{
+    font-size: 2rem;
+
+  }
+
+  .started{
+    width: 50%;
+    height:25%;
+  }
+
+  .footer {
+ display: inline;
+ text-align: center;
+ margin: 0%;
+ height: max-content;
+  
+  }
+  .footer img {
+    margin-right: 0rem;
+    margin-bottom: 10%;
+  }
+  .footerText{
+    margin-right:0rem;
+    margin-bottom: 10%;
+
+  }
+  .footerIcons{
+    margin-bottom: 10%;
+  }
+  
 }

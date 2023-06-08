@@ -42,7 +42,7 @@ export default function Shortener() {
             id="linkinput"
             value={longURL}
             onChange={handleChange}
-            placeholder="Enter a URL"
+            placeholder="Shorten a link here..."
             required
           />
           <Button variant="primary" type="submit" className={styles.shorten}>

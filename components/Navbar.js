@@ -14,11 +14,11 @@ export default function NavbarComponent() {
       <Image src="/images/logo.svg" width={100} height={30} alt="logo" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
+      <Navbar.Collapse className={styles.navbarCollapse}>
         <Nav className="me-auto">
-          <Nav.Link href="#home">Features</Nav.Link>
-          <Nav.Link href="#link">Pricing</Nav.Link>
-          <Nav.Link href="#resourced">Resources</Nav.Link>
+          <Nav.Link href="#home" className={styles.navbarLink}>Features</Nav.Link>
+          <Nav.Link href="#link" className={styles.navbarLink} >Pricing</Nav.Link>
+          <Nav.Link href="#resourced" className={styles.navbarLink}>Resources</Nav.Link>
         </Nav>
         <Nav className="ml-auto">
         <Nav.Link href="#resourced" className='my-auto'>Login</Nav.Link>

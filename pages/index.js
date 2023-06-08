@@ -19,10 +19,11 @@ export default function Home() {
         <div className={styles.container}>
         <main >
           <Container >
-            <Row>
             <Navbar />
+            <Row className={styles.homeCol}>
 
-              <Col  lg={6} sm={12}>
+            <Col  lg={6} sm={12} >
+
               <div className={styles.titleDiv}>
                 <h1 className={styles.title}>
                   More than just shorter links
@@ -31,7 +32,8 @@ export default function Home() {
                   Build your brand’s recognition and get detailed insights
                   on how your links are performing.
                 </p>
-                <Button variant="primary" className={styles.started}>Get Started</Button>
+                
+                <Button variant="primary" className={styles.started1}>Get Started</Button>
                 </div>
 
               </Col>
@@ -50,7 +52,7 @@ export default function Home() {
           <div className={styles.line}></div>
           <h1 className={styles.statisticsTitle}>Advance statistics</h1>
           <p className={styles.statisticsDescription}>Track how your links are performing across the web with our advanced statistics dashboard.</p>
-          <div class="row">
+          <div className="row">
           <div className={styles.line2}></div>
 
           <Col lg={4} sm={12} className={styles.statsCol}>
