@@ -1,35 +1,39 @@
-import React, { useState } from 'react';
-import styles from '../styles/Shortener.module.css'
-import { Button } from 'react-bootstrap'
-import axios from 'axios';
 
+
+import React, { useState } from 'react';
+import { Button } from 'react-bootstrap';
+import axios from 'axios';
+import styles from '../styles/Shortener.module.css';
 
 export default function Shortener() {
   const [originalURL, setOriginalURL] = useState('');
-  const [shortenedURL, setShortenedURL] = useState('');
+  const [shortURL, setShortUrl] = useState('');
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
     try {
       const response = await axios.post('https://cleanuri.com/api/v1/shorten', {
         url: originalURL,
       });
-
-      setShortenedURL(response.data.result_url);
-    } catch (error) {
-      console.error(error);
+      setShortUrl(response.data.result_url);
+    } catch (err) {
+      console.error(err);
     }
   };
+
+
+
+
   return (
-    <div className="container-sm">
+    <div class="container-sm">
       <div className={styles.linkinput}>
       <form method="post" action="" onSubmit={handleSubmit}>
           <input
             type="text"
             id="linkinput"
             value={originalURL}
-            onChange={(e) => setOriginalURL(e.target.value)}
+          onChange={(e) => setOriginalURL(e.target.value)}
             placeholder="Shorten a link here..."
             required
           />
@@ -39,11 +43,11 @@ export default function Shortener() {
         </form>
       </div>
       <div className={styles.results}>
-      {shortenedURL && (
+      {shortURL && (
         <div>
           <h2>Shortened URL:</h2>
-          <a href={shortenedURL} target="_blank" rel="noopener noreferrer">
-            {shortenedURL}
+          <a href={shortURL} target="_blank" rel="noopener noreferrer">
+            {shortURL}
           </a>
         </div>
       )}
