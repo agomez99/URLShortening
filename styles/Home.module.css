@@ -10,17 +10,16 @@
 
 }
 
-.main {
-
-
-}
-
 .imageContainer{
   margin-bottom: 10%;
 }
+.homeCol2{
+
+
+}
 .statistics{
   width: 100%;
-  background-color: white;
+  background-color:rgb(240, 241, 246);
   align-items: center;
   padding-bottom: 10%;
   margin-top: 5%;
@@ -41,11 +40,11 @@
 
 }
 .line {
-  width: 500px;
+  width: 600px;
   height: 47px;
   border-bottom: 10px solid hsl(180, 66%, 49%);
-  position: absolute;
-  top:125%;
+  display:none;
+  top:142%;
   right:40%
 }
 
@@ -138,6 +137,7 @@
   text-align: center;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
+  margin-top: 5%;
 
 }
 .statisticsDescription{
@@ -157,6 +157,7 @@
   padding: 4%;
   width:65px;
   height:65px;
+  
 }
 .card {
   margin: 1rem;
@@ -190,6 +191,11 @@
 
 .logo {
   height: 1em;
+}
+
+
+.statsCol{
+  background-color:rgb(240, 241, 246)
 }
 
 @media (max-width: 600px) {
@@ -229,12 +235,13 @@
   height: 500px;
   left: 50%;
   margin-left: -3px;
-  top:150%;
+  top:140%;
+  display: none;
 }
 
 .statsCol{
 
-  display: flex;
+  display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;

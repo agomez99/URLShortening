@@ -11,51 +11,53 @@ import { Facebook, Twitter, Pinterest, Instagram } from 'react-bootstrap-icons';
 export default function Home() {
   return (
     <>
-        <Head>
-          <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
-          <meta name="viewport" content="initial-scale=1.0, width=device-width"></meta>
+      <Head>
+        <title>Frontend Mentor |  URL shortening API Challenge</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width"></meta>
 
-        </Head>
-        <div className={styles.container}>
+      </Head>
+      <div className={styles.container}>
         <main >
           <Container >
             <Navbar />
             <Row className={styles.homeCol}>
 
-            <Col  lg={6} sm={12} >
+              <Col lg={6} sm={12} >
 
-              <div className={styles.titleDiv}>
-                <h1 className={styles.title}>
-                  More than just shorter links
-                </h1>
-                <p className={styles.description}>
-                  Build your brand’s recognition and get detailed insights
-                  on how your links are performing.
-                </p>
-                
-                <Button variant="primary" className={styles.started1}>Get Started</Button>
+                <div className={styles.titleDiv}>
+                  <h1 className={styles.title}>
+                    More than just shorter links
+                  </h1>
+                  <p className={styles.description}>
+                    Build your brand’s recognition and get detailed insights
+                    on how your links are performing.
+                  </p>
+
+                  <Button variant="primary" className={styles.started1}>Get Started</Button>
                 </div>
 
               </Col>
-              <Col  lg={6} sm={12} >
+              <Col lg={6} sm={12} >
                 <div className={styles.imageContainer}>
                   <Image src="/images/illustration-working.svg" alt="working" width={700} height={550} className={styles.image} />
                 </div>
               </Col>
             </Row>
           </Container>
-
-
         </main>
+        <Row  lg={12} sm={12} className={styles.homeCol2}>
         <Shortener />
+
+        </Row>
         <div className={styles.statistics}>
+
           <div className={styles.line}></div>
           <h1 className={styles.statisticsTitle}>Advance statistics</h1>
           <p className={styles.statisticsDescription}>Track how your links are performing across the web with our advanced statistics dashboard.</p>
           <div className="row">
-          <div className={styles.line2}></div>
+            <div className={styles.line2}></div>
 
-          <Col lg={4} sm={12} className={styles.statsCol}>
+            <Col lg={4} sm={12} className={styles.statsCol}>
               <Card style={{ width: '20rem' }} className={styles.card1}>
                 <div className={styles.iconCircle}>
                   <Image src="/images/icon-brand-recognition.svg" alt="brand" width={40} height={40} />
@@ -131,10 +133,10 @@ export default function Home() {
             <p>Contact</p>
           </div>
           <div>
-              <Facebook color="white" size={40} className={styles.footerIcons} />
-              <Twitter color="white" size={40} className={styles.footerIcons} />
-              <Pinterest color="white" size={40} className={styles.footerIcons} />
-              <Instagram color="white" size={40} className={styles.footerIcons} />
+            <Facebook color="white" size={40} className={styles.footerIcons} />
+            <Twitter color="white" size={40} className={styles.footerIcons} />
+            <Pinterest color="white" size={40} className={styles.footerIcons} />
+            <Instagram color="white" size={40} className={styles.footerIcons} />
           </div>
 
         </footer>
