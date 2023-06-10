@@ -13,7 +13,7 @@ export default function Shortener() {
     event.preventDefault();
 
     try {
-      const response = await axios.post('https://cleanuri.com/api/v1/shorten', {
+      const response = await axios.post('https://cleanuri.com/api/v1/shorten',  { 
         url: originalURL,
       });
       setShortUrl(response.data.result_url);
@@ -22,11 +22,8 @@ export default function Shortener() {
     }
   };
 
-
-
-
   return (
-    <div class="container-sm">
+    <div className="container-sm">
       <div className={styles.linkinput}>
       <form method="post" action="" onSubmit={handleSubmit}>
           <input
