@@ -6,49 +6,54 @@ import axios from 'axios';
 import styles from '../styles/Shortener.module.css';
 
 export default function Shortener() {
-  const [originalURL, setOriginalURL] = useState('');
-  const [shortURL, setShortUrl] = useState('');
+  const [originalUrl, setOriginalUrl] = useState('');
+  const [shortenedUrl, setShortenedUrl] = useState('');
+  const [error, setError] = useState('');
 
-  const handleSubmit = async (event) => {
+  const APIKEY = process.env.NEXT_PUBLIC_BITLY_TOKEN;
+
+  const handleShortenUrl = async (event) => {
     event.preventDefault();
 
     try {
-      const response = await axios.post('https://cleanuri.com/api/v1/shorten',  { 
-        url: originalURL,
-      });
-      setShortUrl(response.data.result_url);
-    } catch (err) {
-      console.error(err);
+      const apiUrl = `https://api-ssl.bitly.com/v4/shorten`;
+      const headers = {
+        Authorization: `Bearer ${APIKEY}`,
+        'Content-Type': 'application/json',
+      };
+      const data = { long_url: originalUrl };
+      const response = await axios.post(apiUrl, data, { headers });
+      setShortenedUrl(response.data.link);
+      setError('');
+    } catch (error) {
+      setError('An error occurred. Please try again.');
     }
   };
 
   return (
     <div className="container-sm">
       <div className={styles.linkinput}>
-      <form method="post" action="" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            id="linkinput"
-            value={originalURL}
-          onChange={(e) => setOriginalURL(e.target.value)}
-            placeholder="Shorten a link here..."
-            required
-          />
-          <Button variant="primary" type="submit" className={styles.shorten}>
-            Shorten It!
-          </Button>
-        </form>
+        <input
+          type="text"
+          value={originalUrl}
+          id="linkinput"
+          onChange={(e) => setOriginalUrl(e.target.value)}
+          placeholder="Enter the URL to shorten"
+        />
+        <Button variant="primary"  onClick={handleShortenUrl} className={styles.shorten}>
+          Shorten It!
+        </Button>
       </div>
       <div className={styles.results}>
-      {shortURL && (
-        <div>
-          <h2>Shortened URL:</h2>
-          <a href={shortURL} target="_blank" rel="noopener noreferrer">
-            {shortURL}
-          </a>
-        </div>
-      )}
-    </div>
+        {shortenedUrl && (
+          <div>
+            <h2>Shortened URL:</h2>
+            <a href={shortenedUrl} target="_blank" rel="noopener noreferrer">
+              {shortenedUrl}
+            </a>
+          </div>
+        )}
       </div>
+    </div>
   );
 }
