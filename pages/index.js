@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
       <div className={styles.container}>
         <main >
-          <Container >
+          <Container fluid='true'>
             <Navbar />
             <Row className={styles.homeCol}>
 
@@ -45,9 +45,8 @@ export default function Home() {
             </Row>
           </Container>
         </main>
-        <Row  lg={12} sm={12} className={styles.homeCol2}>
-        <Shortener />
-
+        <Row>
+          <Shortener />
         </Row>
         <div className={styles.statistics}>
 
@@ -64,23 +63,22 @@ export default function Home() {
                 </div>
 
                 <Card.Body>
-                  <Card.Title>Brand Recognition</Card.Title>
-                  <Card.Text>
+                  <Card.Title className={styles.cardTitle}>Brand Recognition</Card.Title>
+                  <Card.Text className={styles.cardbodyText}>
                     Boost your brand recognition with each click. Generic links don’t
                     mean a thing. Branded links help instil confidence in your content.
                   </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
-            <Col lg={4} className={styles.statsCol}>
-
+            <Col lg={4} className={styles.statsCol} >
               <Card style={{ width: '20rem' }} className={styles.card2}>
                 <div className={styles.iconCircle}>
                   <Image src="/images/icon-detailed-records.svg" alt="detailed" width={40} height={40} />
                 </div>
                 <Card.Body>
-                  <Card.Title>Detailed Records</Card.Title>
-                  <Card.Text>
+                <Card.Title className={styles.cardTitle}>Detailed Records</Card.Title>
+                  <Card.Text className={styles.cardbodyText}>
                     Gain insights into who is clicking your links. Knowing when and where
                     people engage with your content helps inform better decisions.
                   </Card.Text>
@@ -93,8 +91,8 @@ export default function Home() {
                   <Image src="/images/icon-fully-customizable.svg" alt="customizable" width={40} height={40} />
                 </div>
                 <Card.Body>
-                  <Card.Title>Fully Customizable</Card.Title>
-                  <Card.Text>
+                <Card.Title className={styles.cardTitle}>Fully Customizable</Card.Title>
+                  <Card.Text className={styles.cardbodyText}>
                     Improve brand awareness and content discoverability through customizable
                     links, supercharging audience engagement.
                   </Card.Text>

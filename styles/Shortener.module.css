@@ -1,52 +1,111 @@
-.linkinput{
+.linkinput {
 
         background-color: hsl(257, 27%, 26%);
         background-image: url('/images/bg-shorten-desktop.svg');
-        background-repeat:no-repeat;
+        background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        height:150px;
-        width:1200px;
+        height: 150px;
+        width: 1200px;
         border-radius: 15px;
         vertical-align: middle;
         margin-top: 5%;
-            
-}
 
-.shorten{
+}
+.inputstyle{
+        width:900px;
+        height:60px;
+        border-radius:10px;
+        margin-top: 4%;
+        margin-left: 5%;
+        margin-right:2%;
+        border-color:hsl(0, 0%, 0%); 
+        border-width: 2px;
+        border-style: solid;
+      }
+
+      .inputerror{
+        width:900px;
+        height:60px;
+        border-radius:10px;
+        margin-top: 4%;
+        margin-left: 5%;
+        margin-right:2%;
+        border-color:hsl(0, 87%, 67%); 
+        border-width: 3px;
+        border-style: solid;
+      }
+
+      .oringinalURL{
+        margin: 0%;
+      }
+.shorten {
         background-color: aqua;
         border-radius: 10px;
-        border:none;
-        width:150px;
-        height:50px;     
+        border: none;
+        width: 150px;
+        height: 50px;
+}
+.error{
+        color:hsl(0, 87%, 67%);
+        margin-left: 10%;
+
 }
 
 
-@media (max-width: 600px) {
+.results{
+        display: flex;
 
+        height: 100px;
+        width:100%;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
 
-        .linkinput{
+}
+.copy{
+        margin-left: 200px;
+        height:50px;
+        width: 100px;
+}
 
-                background-color: hsl(257, 27%, 26%);
+@media screen and (max-width: 600px) {
+        .container {
+                width: 350PX;;
+        }
+
+        .linkinput {
+
                 background-image: url('/images/bg-shorten-desktop.svg');
-                background-repeat:no-repeat;
+                background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
-                height:150px;
-                width:100%;
+                height: 150px;
                 border-radius: 15px;
                 vertical-align: middle;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-items: center; 
-        
-                
-        }
-
-        .shorten{
-
+                align-items: center;
+                margin: 0%;
+                margin-right:0%;
                 width:100%;
- 
+
+
         }
+
+        #linkinput{
+                width:90%;
+                height:50px;
+                border-radius:10px;
+                margin-top: 4%;
+                margin-left: 0%;
+                margin-bottom: 5%;
+        }
+
+        .shorten {
+                width: 90%;
+
+        }
+  
 }

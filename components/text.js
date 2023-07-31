@@ -22,10 +22,7 @@ export default function Shortener() {
         'Content-Type': 'application/json',
       };
       const data = { long_url: originalUrl };
-
       const response = await axios.post(apiUrl, data, { headers });
-      const original = originalUrl;
-      console.log(original);
       setShortenedUrl(response.data.link);
       setError('');
     } catch (error) {
@@ -53,13 +50,11 @@ export default function Shortener() {
 
       <div className={styles.results}>
         {shortenedUrl && (
-          <div className={styles.results}>
-          <p className={styles.originalURL}>{originalUrl}</p>
+          <div>
+            <h2>Shortened URL:</h2>
             <a href={shortenedUrl} target="_blank" rel="noopener noreferrer">
               {shortenedUrl}
             </a>
-            <Button variant="primary" className={styles.copy} onClick={() => navigator.clipboard.writeText(shortenedUrl)}>
-           Copy </Button>
           </div>
         )}
       </div>
